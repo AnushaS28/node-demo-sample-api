@@ -99,7 +99,7 @@ app.get('/api/getproducts/price/:id',(req, res) => {
   console.log(sql);
   let query = mysqlClient.query(sql, (err, results) => {
     if(err) throw err;
-    res.send(JSON.stringify(results);
+    res.send(results);
   });
 });
 
