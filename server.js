@@ -79,7 +79,7 @@ app.get('/api/getproducts/desc/:desc',(req, res) => {
   console.log(sql);
   let query = mysqlClient.query(sql, (err, results) => {
     if(err) throw err;
-    res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
+    res.send(results);
   });
 });
 
@@ -89,7 +89,7 @@ app.get('/api/getproducts/id/:id',(req, res) => {
   console.log(sql);
   let query = mysqlClient.query(sql, (err, results) => {
     if(err) throw err;
-    res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
+    res.send(results);
   });
 });
 
@@ -99,7 +99,7 @@ app.get('/api/getproducts/price/:id',(req, res) => {
   console.log(sql);
   let query = mysqlClient.query(sql, (err, results) => {
     if(err) throw err;
-    res.send(JSON.stringify({"status": 200, "error": null, "response": results}));
+    res.send(JSON.stringify(results);
   });
 });
 
